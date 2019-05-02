@@ -1,0 +1,53 @@
+<div *ngIf="!menuFixo" class="icone-holder">
+  <!--Botão abre menu-->
+  <a class="sidemenu-icon" [class.hide]="hide" (click)="toggleCollapseMenu()">
+    <i class="material-icons">menu</i>
+  </a>
+  <!--Botão fecha menu-->
+  <a class="sidemenu-icon hide" [class.hide]="!hide" (click)="toggleCollapseMenu()">
+    <i class="material-icons">arrow_back</i>
+  </a>
+</div>
+
+<div *ngIf="menuFixo">
+  <a class="sidemenu-icon">
+    <i class="material-icons">menu</i>
+  </a>
+</div>
+
+
+<div class="sidemenu opened" id="sideMenu" [style.width]="sideMenuWidth">
+  <div class="item menu-text-truncate" [ngClass]="{ 'menu-active': rotaAtual === '/home'}">
+    <a class="menu-lateral" [routerLink]="['/home']" mz-tooltip
+    [tooltip]="'Página Inicial'"
+    [position]="'bottom'"
+    [html]="true"
+    [delay]="1000"
+    >
+      <a class="menu-icone menu-icone-active valign-wrapper">
+        <img src="assets/img/pin-menu-principal.svg">
+      </a>
+      Página Inicial
+    </a>
+  </div>
+
+
+
+  <div class="item menu-text-truncate" *ngFor="let item of listaMenus">
+    <div class="menu-lateral"
+    mz-tooltip      
+    [ngClass]="{ 'menu-icone-active': item.MenuFavoritoUsuario === 'Favorito'}"
+    [tooltip]="item.DescMenu"
+    [position]="'bottom'"
+    [html]="true"
+    [delay]="1000">
+      <a class="menu-icone valign-wrapper" (click)="verificaFavorito(item.IdTabela, item.MenuFavoritoUsuario)"
+      >
+        <img *ngIf="item.MenuFavoritoUsuario === 'Favorito'" [ngClass]="{ 'menu-icone-active': item.MenuFavoritoUsuario === 'Favorito'}"
+          src="assets/img/pin-menu-principal.svg">
+      </a>
+      <span class="menu-selecionado" (click)="navegar(item.WorkFlowDR)">{{item.DescMenu}}</span>
+    </div>
+  </div>
+</div>
+<div id="siafSidenav" class="sidemenu-fade" (click)="fecharMenu()" [style.width]="siafSidenavWidth" ></div>

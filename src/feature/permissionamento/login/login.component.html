@@ -1,0 +1,72 @@
+<div class="login">
+  <div class="side-login logar">
+
+    <div class="formulario-login">
+      <div class="row">
+        <div class="col s12">
+          <img class="responsive-img" src="./assets/img/logo.jpg" alt="Logo Albert Einstein" />
+        </div>
+      </div>
+      <form [formGroup]="formulario">
+        <div class="row">
+          <div class="col s12">
+            <div class="input-field">
+              <label for="usuario" class="active"> Usuario</label>
+              <div class="right-inner-addon">
+              <input formControlName="login" placeholder="Usuario" name="usuario"
+                id="usuario" type="text">
+              <span class="erro msg-validacao" *ngIf="(formulario.get('login').touched) && formulario.get('login').errors?.required">Campo Obrigatorio</span>
+            </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col s12">
+            <div class="input-field">
+              <label for="senha" class="active">Senha</label>
+              <div class="right-inner-addon">
+                <input (keyup.enter)="onSubmit()" formControlName="senha" placeholder="Senha"
+                  name="senha" id="senha" type="password">
+                <i (click)="espiar()" id="espiar" [ngClass]="{'espiar-inativo' : !hide}" class="material-icons">visibility</i>
+                <span class="erro msg-validacao" *ngIf="(formulario.get('senha').touched) && formulario.get('senha').errors?.required">Campo Obrigatorio</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row mt-0">
+          <div class="col s12">
+            <div class="input-field">
+              <button (click)="onSubmit()" type="button" class="btn-concluir">Entrar</button>
+            </div>
+          </div>
+        </div>
+
+      </form>
+      <div class="row">
+        <div class="col s12">
+          <div class="customer-service row">
+            <div class="col s2"></div>
+            <div class="col s3">
+            </div>
+            <div class="col s7">
+              <p>Central 01<br />
+                De <b>Atendimento</b><br />
+                <span class="telefone">DDD<span class="g-telefone">Telefone</span></span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="img-login">
+    <div class="titulo-login">
+      <h1>IFATEC</h1>
+      <h5>Sua busca inteligente!
+        <br>.</h5>
+    </div>
+  </div>
+</div>

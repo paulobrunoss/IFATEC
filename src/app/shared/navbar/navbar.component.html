@@ -1,0 +1,30 @@
+<div class="row">
+  <nav>
+    <div class="nav-wrapper nav">
+        <div class="logo">
+        <img src="../assets/logo.svg">
+        <h1>SIAF</h1>
+      </div>
+
+      <ul class="right hide-on-med-and-down">
+        <li [ngClass]="{'active': idiomaDefinido === 'pt-BR' } ">
+          <a (click)="definirIdioma('pt-BR')"> PT-BR</a>
+        </li>
+        <!-- <li [ngClass]="{'active': idiomaDefinido === 'en-US' } ">
+          <a (click)="definirIdioma('en-US')">EN-US </a>
+        </li> -->
+        <li>Olá, José Brasil</li>
+        <li>
+          <a href="#" class="dropdown-button" data-activates="dropdown">
+            <i class="material-icons">settings</i>
+          </a>
+        </li>
+        <li>
+          <a (click)="logout()">
+            <i class="material-icons">input</i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>

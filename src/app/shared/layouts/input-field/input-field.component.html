@@ -1,0 +1,24 @@
+<div class="input-field {{class}}" [class.invalid]="formControlInput.errors && formControlInput.touched">
+  <label class="active label-input-field" *ngIf="label">
+    {{label}}
+    <span *ngIf="IsRequired" class="placeholder-required"> *</span>
+  </label>
+  <ng-content></ng-content>
+
+  <div class="lista-msg-erros" *ngIf="formControlInput.errors && formControlInput.touched">
+    <ng-container *ngFor="let item of mensagensErro">
+      <span class="erro msg-validacao" *ngIf="formControlInput.hasError(item.key)">
+        <ng-container *ngIf="item.key !== 'comparacaoNumerica'">
+          {{item.mensagem}}
+          <ng-container *ngIf="item.key === 'minlength'">
+            : {{formControlInput.errors[item.key].requiredLength}}
+          </ng-container>
+        </ng-container>
+
+        <ng-container *ngIf="item.key === 'comparacaoNumerica'">
+          {{formControlInput.errors[item.key].mensagem}}
+        </ng-container>
+      </span>
+    </ng-container>
+  </div>
+</div>

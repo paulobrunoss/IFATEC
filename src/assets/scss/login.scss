@@ -1,0 +1,224 @@
+@import "assets/scss/css.scss";
+.login {
+  width: 100vw;
+  height: 100vh; //Logo SIAF
+  position: fixed;
+  .img-login {
+    background-color: $cor-secundaria;
+    background: url('assets/img/img-tela-login.jpg');
+    float: left;
+    width: 73%;
+    height: 100%;
+    margin-left: 27%; // background-image: url("./img/img-login.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    .titulo-login {
+      display: block;
+      width: 32%;
+      position: absolute;
+      bottom: 60px;
+      right: 100px;
+      text-align: right;
+      color: #fff;
+      h1 {
+        font-weight: 700;
+        font-size: 3.8rem;
+        line-height: 30px;
+        letter-spacing: 4px;
+      }
+      h5 {
+        letter-spacing: 1px;
+        line-height: 35px;
+      }
+    }
+  }
+  input,
+  select {
+    // border: none !important;
+    background-color: #fff !important;
+  }
+  .input-field label {
+    color: $cor-secundaria !important;
+    text-transform: uppercase;
+    font-weight: 600 !important;
+    font-size: 0.9em !important;
+  }
+  .input-field {
+    margin-top: 0 !important;
+    margin-bottom: 1rem !important;
+  }
+  .input-field input[type="text"]:focus, .input-field input[type="password"]:focus, input:not([type]):focus:not([readonly]), select:focus {
+    border: 1px solid $cor-highlight !important;
+    box-shadow: none !important;
+}
+  .right-inner-addon,
+  .left-inner-addon {
+    i {
+      color: $cor-secundaria;
+      background-color: transparent;
+    }
+  } //Lateral da página de login
+  .side-login {
+    background-color: #fff;
+    float: left;
+    height: 100%;
+    position: absolute;
+    .btn-default {
+      color: #3b3b3b !important;
+      font-weight: normal;
+      line-height: 24px !important;
+      text-transform: initial !important;
+      padding: 10px;
+      margin-left: 0 !important;
+    }
+    .btn-info {
+        margin-left: 0 !important;
+    }
+  } //Quando a side-login exibir o formulário de login
+  .logar {
+    width: 28%;
+    .formulario-login {
+      padding: 30% 16% 0 17%;
+      margin: 0 auto;
+      img {
+        padding: 0 0 16% 0;
+        width: 280px;
+      }
+    }
+  } //Quando a side-login exibir o usuário logado
+  .logado {
+    width: 100%;
+  }
+  .btn {
+      font-size: 14px !important;
+      text-transform: capitalize;
+      border-radius: 25px;
+      min-width: 150px;
+  }
+  .usuario {
+    margin: 50px 0;
+    img {
+      float: left;
+      margin: 0 30px 0 0;
+      height: 75px;
+      width: 75px;
+      border-radius: 50%;
+    }
+    h2 {
+      color: $cor-secundaria;
+      margin: 20px 0 5px 0;
+      font-size: 1.15rem;
+    }
+  }
+  .grupo-seguranca {
+    margin: 0px;
+    overflow-y: auto;
+    height: 45vh;
+    box-shadow: 0px -1px 0px 1px #eee;
+    table.striped > tbody > tr > td {
+      font-size: 0.9rem;
+      padding: 0;
+      height: 45px !important;
+    }
+    table.striped > tbody > tr {
+      border-top: 1px solid #D5D5D5 !important;
+    }
+  }
+
+  .customer-service {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 122px;
+    width: 100%;
+    background: #F1F1F1;
+    margin: 0;
+
+    img {
+        width: 60px;
+        margin-right: 15px;  
+    }
+
+    p {
+        margin: 0;
+        color: #325270;
+        font-size: 14px;
+    }
+
+    span.telefone {
+        font-size: 10px;
+        color: #2196F3;
+    }
+
+    span.g-telefone {
+        font-size: 15px;
+        font-weight: bold;
+    }
+}
+}
+
+
+//SCROLLBAR
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    width: 5px;
+    background: #005A9C;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 0px rgba(0,0,0,0);
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    border:none;
+}
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0);
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+
+[type="radio"]:checked+label:after, [type="radio"].with-gap:checked+label:after {
+    background-color: #0057a1 !important;
+}
+[type="radio"]:checked+label:after, [type="radio"].with-gap:checked+label:before, [type="radio"].with-gap:checked+label:after {
+    border: 2px solid #0057a1 !important;
+}
+
+.center-align .radio-button-field {
+    text-align: center;
+}
+
+i.espiar-inativo {
+    opacity: 0.8;
+}
+
+.login .btn-concluir {
+  margin: 0 !important;
+  background-color: #bc433d !important;
+}
+
+.formulario-login .btn-concluir {
+  width: 100%;
+}
+
+.voltar-login {
+  margin-top: 30px;
+    i {
+      font-size: 15px;
+    }
+}
+
+.voltar-login .btn-default {
+  padding: 0 60px !important;
+}
+
+.logado {
+  .container {
+    width: 100%;
+    padding: 0;
+    margin-right: 60px;
+  }
+}

@@ -1,0 +1,127 @@
+/*********************************************************************
+AQUI SÃO INCLUÍDOS OS PADRÕES.
+EX.: CORES, FONTE, APLICAÇÃO DE COR, 
+*********************************************************************/
+
+
+//CORES
+$cor-primaria: #1976D2;
+$cor-secundaria: #004564;
+$cor-highlight: #005A9C;
+$cor-add: #1976D2;
+$cor-texto: #3B3B3B;
+$cor-verde: #007D4E;
+$cor-verde-claro: #2E7D32;
+$cor-icone: #3CAAD5;
+$cor-inativo: rgb(165,
+165,
+165);
+$cor-enviar: #007897;
+$cor-erro: #D50000;
+$cor-sucesso: #00C853;
+// CORES RELEASE 2
+$cor-buscar: #004564;
+$cor-concluir: #005A9C;
+$cor-salvar: #007897;
+$cor-criar: #1976D2;
+$cor-arquivos: #00796B;
+$cor-destrutivo: #D50000;
+$cor-texto: #3B3B3B;
+//FONTE
+$fonte: 'Open Sans',
+sans-serif;
+//APLICAÇÃO DE COR NO TEXTO
+.texto-cor-primaria {
+    color: $cor-primaria !important;
+}
+
+.texto-cor-secundaria {
+    color: $cor-secundaria !important;
+}
+
+.bg-cor-ativo {
+    background-color: $cor-verde-claro !important;
+}
+
+.bg-cor-inativo {
+    background-color: $cor-erro !important;
+}
+
+.texto-cor-erro {
+    color: $cor-erro !important;
+    i {
+        color: $cor-erro !important;
+    }
+}
+
+.texto-cor {
+    color: $cor-texto !important;
+}
+
+.texto-cor-dropdown {
+    color: $cor-texto !important;
+    i {
+        color: $cor-texto !important;
+    }
+}
+
+b,
+strong {
+    font-weight: bold !important;
+}
+
+.cor-erro {
+    background-color: $cor-erro !important;
+}
+
+.cor-sucesso {
+    background-color: $cor-sucesso !important;
+}
+
+.cor-inativo {
+    background-color: $cor-inativo !important;
+}
+
+.texto-link {
+    color: $cor-icone;
+    text-decoration: underline;
+}
+
+#printable-area {
+    visibility: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+@media print {
+    @page {
+        margin: 0;
+    }
+    .print #unprintable-area * {
+        visibility: hidden;
+        display: none;
+    }
+
+    pdf-viewer .page{
+        width: auto;
+        height: auto;
+        max-height: 900px;
+        page-break-inside: avoid;
+    }
+
+
+    .print #printable-area,
+    .print #printable-area * {
+        width: auto;
+        display: block;
+        visibility: visible;
+        overflow: hidden !important;
+    }
+    .print #printable-area .Previsualizacao pdf-viewer {
+        max-height: max-content;
+    }
+
+    .heightImpressao {
+        height: 900px;
+    }
+}

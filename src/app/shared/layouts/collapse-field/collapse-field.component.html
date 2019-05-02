@@ -1,0 +1,14 @@
+<div class="c-field-container no-break-word" *ngIf="allItems.length === 1">
+    <span>{{first}}</span>
+</div>
+<div class="c-field-container no-break-word" *ngIf="allItems.length > 1">
+  <div class="c-field-first" *ngIf="!expand" (click)="expandirItems()" style="cursor: pointer">
+    <span>{{first}}</span><span>...</span>
+  </div>
+  <div class="c-field-all" *ngIf="expand">
+    <div *ngFor="let item of allItems">
+      <span>{{item}}</span>
+    </div>
+    <span (click)="colapsarItems()" class="mostrarMenos"><i class="material-icons">expand_less</i> Mostrar menos</span>
+  </div>
+</div>

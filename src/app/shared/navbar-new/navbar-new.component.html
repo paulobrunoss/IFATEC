@@ -1,0 +1,62 @@
+<div class="row">
+  <nav>
+    <div class="nav-wrapper nav">
+        <div class="logo">
+        <img src="../assets/logo.svg">
+        <h1>NOVO SISTEMA</h1>
+      </div>
+      <ul class="user-area-header right hide-on-med-and-down">
+        <!-- <li class="user-language valign-wrapper">
+            <p class="valign-wrapper">{{'TRANSLATE.IDIOMA' | translate}}</p>
+            <i class="material-icons icon-btn" id="btn-dropdown-language">keyboard_arrow_down</i>
+            <div class="language-options menu-dropdown" *ngIf="selectIdioma">
+                <a (click)="definirIdioma('pt-BR')">PT-BR</a><br/>
+                <a (click)="definirIdioma('en-US')">EN-US</a>
+            </div>
+            <mz-dropdown
+                [id]="'dropdown-language'"
+                [align]="'center'"
+                [belowOrigin]="true"
+                [constrainWidth]="true"
+                [dropdownButtonId]="'btn-dropdown-language'"
+                [gutter]="true"
+                [hover]="false"
+                [inDuration]="300"
+                [outDuration]="100"
+                [stopPropagation]="true"
+                >
+                <mz-dropdown-item><a (click)="definirIdioma('pt-BR')">PT-BR</a></mz-dropdown-item>
+                <mz-dropdown-item><a (click)="definirIdioma('en-US')">EN-US</a></mz-dropdown-item>
+            </mz-dropdown>
+        </li> -->
+        <li class="user-name valign-wrapper">
+            <p><b>Bem Vindo </b>, Paulo Santos <br/>
+            <span class="user-grupo-seguranca"> {{usuario.DescGrupoSeguranca}} </span></p>
+        </li>
+        <li class="user-options">
+            <i class="material-icons icon-btn" id="btn-dropdown-user">keyboard_arrow_down</i>
+            <mz-dropdown
+                [id]="'dropdown-user'"
+                [align]="'left'"
+                [belowOrigin]="true"
+                [constrainWidth]="true"
+                [dropdownButtonId]="'btn-dropdown-user'"
+                [gutter]="true"
+                [hover]="false"
+                [inDuration]="300"
+                [outDuration]="300"
+                [stopPropagation]="true"
+                >
+                <mz-dropdown-item><a (click)="logout()" class="danger"><i class="material-icons">input</i> <span> Realizar Logof  </span></a></mz-dropdown-item>
+                <mz-dropdown-item><a><i class="material-icons">create</i> Editar Perfil </a></mz-dropdown-item>
+                <span class="sub-item-idioma">Idioma</span>
+                <mz-dropdown-item><a (click)="definirIdioma('pt-BR')"><i class="material-icons">translate</i> PT-BR</a></mz-dropdown-item>
+            </mz-dropdown>
+        </li>
+        <li class="user-avatar valign-wrapper">
+            <img src="assets/img/avatar-white.svg">
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>

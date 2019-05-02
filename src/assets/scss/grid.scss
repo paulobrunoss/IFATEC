@@ -1,0 +1,389 @@
+// ESTILOS DE GRID E PAGINAÇÃO
+//
+// ÍNDICE
+//
+// -- TABELAS
+// -- PAGINAÇÃO
+
+// Ajustes de tabela (aguardar merge)
+
+// table {
+//     thead {
+//         border-top: none !important;
+//     }
+//     th {
+//         font-size: 12px;
+//         padding-top: 30px;
+//         padding-bottom: 10px;
+//         border-top: none !important;
+//     }
+    
+// }
+
+
+// Datatable com scroll
+
+.dataTables_scrollBody {
+    border-bottom: 1px solid #eee !important;
+    thead > tr {
+        display: none;
+    }
+    tbody {
+        line-height: 0 !important;
+    }
+    tbody td {
+        line-height: 16px;
+    }
+}
+
+
+// Table
+
+.tabela-responsaveis {
+    th {
+        padding-bottom: 5px !important;
+        padding-left: 0 !important;
+        color: $cor-highlight;
+        font-weight: bold !important;
+        opacity: 1;
+    }
+
+    .dp-large {
+        width: 50px !important;
+        padding: 0 10px 0 0 !important;
+    }
+
+    td.dp-large ul {
+        min-width: 230px !important;
+    }
+
+    td {
+        background: #f7f7f7;
+        min-height: 68px !important;
+        padding: 10px 0 !important
+    }
+
+    .lista-titulo {
+        font-size: 14px;
+        color: $cor-highlight !important;
+    }
+}
+
+
+
+// .table-nova {
+
+//     th {
+//         color: #848484;
+//         font-weight: 500;
+//     }
+    
+//     table.striped tr {
+//         border-top: none !important;
+//     }
+// }
+
+
+//TABELA
+// table.striped tbody tr {
+//     border-top: 1px solid #e5e5e5 !important;
+// }
+
+// th {
+//     line-height: 30px;
+//     font-weight: 600 !important;
+//     opacity: 0.6;
+//     color: $cor-texto;
+//     font-size: 0.9rem;
+// }
+
+// table.striped>tbody>tr>td {
+//     font-size: 14px;
+//     padding-top: 13px;
+//     padding-bottom: 13px;
+
+//     i.material-icons {
+//         color: $cor-icone;
+//     }
+// }
+
+// .tabela-alertas .dataTables_wrapper .dataTables_paginate {
+//     margin-left: 60px !important;
+// }
+
+// table.striped>tbody>tr:nth-child(odd) {
+//     background-color: #fdfdfd;
+// }
+// table.striped > tbody > tr:nth-child(even) {
+//     background-color: #F8F8F8;
+// }
+
+// Tabela Drag and drop disabled
+
+.drag-disabled {
+    pointer-events: none !important;
+    opacity: 0.3;
+}
+
+.disable-select {
+    user-select: none;
+}
+
+
+// Tabela de casdastro de campos na tela.
+.tabela-tela{
+    max-height: 280px;
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    p.checkbox-field {
+        text-align: center;
+    }
+
+    td.td-large {
+        width: 70%;
+    }
+
+    td.td-middle {
+        width: 44%;
+    }
+}
+
+// -- TABELAS
+
+table:not(.caltable):not(.header), table.dataTable, table.dataTable.no-footer {
+    thead {
+        th {
+            font-size: 12px;
+            color: #707070;
+            font-weight: 500;
+            border-bottom: 1px solid #D5D5D5;
+            padding: 30px 0 5px 0;
+            white-space: nowrap;
+        }
+        th:not(:first-child) {
+            padding: 30px 15px 5px 0;
+        }
+        .sorting_asc, .sorting_desc, .sorting {
+            background-image: none;
+            background-size: 10px;
+            background-position: 0 36px;
+        }
+    }
+
+    tbody {
+        tr:nth-child(odd) {
+            background: #f8f8f8;
+        }
+        tr:nth-child(even) {
+            background: #fdfdfd;
+        }
+        td {
+            border-bottom: 1px solid #f2f2f2;
+            font-size: 14px;
+            color: #3B3B3B;
+            padding: 0 10px;
+            height: 45px;
+            line-height: 19px;
+            padding-left: 0px;
+            i {
+                font-size: 15px;
+            }
+        }
+
+        tr:hover {
+            background-color: #F6FBFF;
+            td {
+                border-bottom: 1px solid #DEF3FC;
+            }
+        }
+    }
+    th:first-of-type, th:last-of-type, td:first-of-type, td:last-of-type {
+            width: 50px;
+            // padding: 0 !important;
+        }
+
+    border-bottom: 0px;
+}
+
+.navegacao-paciente-conteudo {
+    .col.s6.tabela-lista-paciente {
+        padding: 0 0 0 8px !important;
+        height: 420px;
+        overflow-y: auto;
+        margin-top: -21px;
+    }
+    .row .col:not(.no-padding).form-lista-paciente {
+        padding: 0 0 0 60px !important
+    }
+    table:not(.caltable):not(), table.dataTable, table.dataTable.no-footer {
+        tr:nth-child(even), tr:nth-child(odd) {
+            background: #fdfdfd;
+            cursor: pointer;
+        }
+        thead th:not(:first-child), table.dataTable.no-footer thead th:not(:first-child) {
+            padding-top: 0; 
+        }
+        td p, span {
+            font-size: 12px;
+            margin-top: 0px;
+            margin-bottom: 5px;
+        }
+        td {
+            margin: 0px 5px 10px 5px !important; 
+        }
+        th {
+            border-color: #f2f2f2;
+            padding-bottom: 0px !important;
+            color: #707070;
+            font-weight: 100;
+            background: #fff;
+        }
+    }
+    .active {
+        font-size: 14px;
+        font-weight: 600;
+        color: #005A9C;
+        margin-top: 10px;
+    }
+    .listaTitulo {
+        font-size: 14px;
+        font-weight: 600;
+        display: block;
+        color: #005A9C;
+    }
+}
+
+.dataTables_wrapper .dataTables_paginate {
+    float: left;
+    margin-left: 50px;
+    padding-top: 15px;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+    padding: 0;
+    font-size: 12px;
+    width: 22px;
+    height: 22px;
+    margin: 0 3px;
+    border: 0;
+    i.material-icons {
+        font-size: 14px;
+    }
+    
+}
+
+ // paginação página atual
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.current, 
+.dataTables_wrapper .dataTables_paginate .paginate_button.current:hover, 
+.dataTables_wrapper .dataTables_paginate .paginate_button.current:active,
+.dataTables_wrapper .dataTables_paginate .paginate_button:active {
+    background: #1976D2;
+    color: #fff;
+    border-radius: 50%;
+    line-height: 21px;
+    outline: none;
+    border: none;
+    box-shadow: none;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button:focus {
+    outline: none;
+    border: none;
+    box-shadow: none;
+}
+
+ // paginação hover no botão
+
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+    background: none;
+    border: none;
+    color: #1976D2;
+}
+
+.paginate_button.next, .paginate_button.previous {
+    position: relative;
+    margin: 0;
+    i {
+        position: absolute;
+        bottom: -3px;
+        left: 0;
+    }
+}
+
+// Icones em SVG
+
+img.icon {
+    width: 15px;
+    height: 15px;
+}
+
+td i.cadeado, td i.ordem {
+    color: #1976D2;
+}
+
+.resultados-busca-paciente .collapsible-body {
+    table {
+        th {
+            padding: 25px 15px 0px 0;
+            border: none !important;
+            color: #b1b1b1;
+        }
+        tr {
+            background: #fff !important;
+        }
+
+        tr:hover td {
+            border-bottom: 1px solid #f2f2f2;
+        }
+
+        td {
+            white-space: nowrap;
+            font-size: 12px;
+            padding-right: 15px !important;
+        }
+    }
+}
+
+.episodio-badge {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 5px;
+    margin-top: 4px;
+}
+
+.episodio-dados {
+    display: inline-block;
+    max-width: 155px;
+}
+
+.agendamentoEpisodio-options {
+    display: flex;
+    justify-content: flex-end;
+    // align-items: center;
+    height: 100%;
+}
+
+.agendamentoEpisodio-tag {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.pag-number a.paginate_button {
+    padding: 0;
+    font-size: 12px !important;
+    width: 22px;
+    height: 22px;
+    margin: 0 3px;
+    background: #1976D2;
+    color: #fff;
+    border-radius: 50%;
+    line-height: 21px;
+    outline: none;
+    border: none;
+    box-shadow: none;
+}

@@ -1,0 +1,9 @@
+<div #alerta class="alert-modal-fade hide" id="alert-confirmacao">
+  <div class="alert-modal">
+    <h4>{{ titulo }}</h4>
+    <img src="assets/img/mensagem-erro.svg" class="center" *ngIf="imagem == 'alertaRetorno'">
+    <p id="mensagemComponentAlert">{{mensagem}}</p>
+    <button  type="button" #btnNao (click)="cancelar()" class="btn btn-nao z-depth-0 "> {{ textoBtnNao }} </button>
+    <button  type="button" #btnSim (click)="ok()" class="btn btn-sim z-depth-0 "> {{ textoBtnSim }} </button>
+  </div>
+</div>
